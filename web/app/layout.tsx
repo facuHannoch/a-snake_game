@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://snakegame.pages.dev"),
   title: "Snake Game",
   description: "Play the classic Snake game online for free. Control your snake with arrow keys or WASD, eat food to grow, and try to beat your high score in this addictive arcade game.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Snake Game - Classic Arcade Game Online",
     description: "Play the classic Snake game online for free. Control your snake with arrow keys or WASD, eat food to grow, and try to beat your high score.",
