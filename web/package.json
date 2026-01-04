@@ -11,7 +11,10 @@
     "test:watch": "jest --watch",
     "test:e2e": "npx playwright test",
     "test:e2e:ui": "npx playwright test --ui",
-    "test:e2e:debug": "npx playwright test --debug"
+    "test:e2e:debug": "npx playwright test --debug",
+    "pages:build": "wsl npx @cloudflare/next-on-pages",
+    "pages:deploy": "npm run pages:build && npx wrangler pages deploy .vercel/output/static --project-name=asnakegame",
+    "pages:dev": "wsl npx @cloudflare/next-on-pages --watch"
   },
   "dependencies": {
     "next": "16.1.1",
