@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
+import Link from 'next/link';
 
 const GRID_SIZE = 15;
 const CELL_SIZE = 30;
@@ -145,7 +146,16 @@ export default function Home() {
   }, [nextDirection, food, gameStarted, gameOver, generateFood]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-900 font-sans">
+    <div className="flex min-h-screen h-screen items-center justify-center bg-zinc-900 font-sans relative overflow-hidden">
+      {/* Info Icon */}
+      <Link
+        href="/info"
+        className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-zinc-500 text-zinc-500 hover:border-green-400 hover:text-green-400 transition-colors font-bold text-lg"
+        title="Game Info"
+      >
+        !
+      </Link>
+
       <main className="flex flex-col items-center gap-8 p-8">
         <h1 className="text-4xl font-bold text-white">Snake Game</h1>
         
